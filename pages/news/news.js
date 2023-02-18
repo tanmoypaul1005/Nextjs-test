@@ -1,12 +1,31 @@
+import { useEffect } from "react";
 import Card from "../components/card/Card";
+import useNewsStore, { getAllNews } from "../../store/newsStore";
 
 function DetailServerSide({ data }) {
-    console.log(data)
+    //console.log(data)
+
+    const { newsData } = useNewsStore();
+    console.log("data", newsData);
+    useEffect(() => {
+        fetchData()
+    }, [])
+
+    const fetchData = async () => {
+        await getAllNews()
+    }
+
     return (
         <div className="flex flex-wrap justify-between">
             {
                 data?.map((item, index) => (
-                    <div className="" key={index}><div><Card item={item?.title} description={item?.description} image={item?.urlToImage} /></div></div>
+                    <div className="mb-[20px] cursor-pointer" key={index}><div>
+                        <Card
+                            item={item?.title}
+                            description={item?.body}
+                            image={item?.urlToImage}
+                        /></div>
+                    </div>
                 ))
             }
         </div>
@@ -17,11 +36,11 @@ export async function getServerSideProps(ctx) {
 
     const { params } = ctx
 
-    const res = await fetch(`https://newsapi.org/v2/everything?q=tesla&from=2023-01-18&sortBy=publishedAt&apiKey=84308ac2e07c46d09d41d301b2b8f5f8`);
+    const res = await fetch(`https://jsonplaceholder.typicode.com/posts/`);
     const data = await res.json()
     return {
         props: {
-            data: data?.articles
+            data: data
         }
     }
 }
