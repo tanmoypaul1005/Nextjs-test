@@ -12,7 +12,7 @@ export default function Home() {
     <div className={styles.container}>
       <title>Paul</title>
        
-      <Link href="/blog/1" replace><h3>Blog 1</h3></Link>
+      <Link href="/blog/1" replace><h3 className="">Blog 1</h3></Link>
       <Link href="/blog/2" replace> <h3>Blog 2</h3></Link>
       <Link href="/blog/3" replace><h3>Blog 3</h3></Link>
       <Link href="/blog/4"  replace><h3>Blog 4</h3></Link>
