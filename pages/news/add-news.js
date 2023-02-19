@@ -14,7 +14,7 @@ function MyComponent() {
             body: JSON.stringify({ data })
         })
 
-        console.log("res",res)
+        // console.log("res",res)
         if (res.status === 200) {
             console.log('Data received')
         } else {
