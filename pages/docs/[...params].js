@@ -11,7 +11,7 @@ function Document() {
     }
     return (
         <div>
-            <div></div>
+           
         </div>
     )
 }
