@@ -2,7 +2,7 @@ import { Router } from "next/router";
 import Card from "../components/card/Card";
 
 function DetailServerSide({ data }) {
-    console.log(data)
+    // console.log(data)
     return (
         <div className="flex flex-wrap justify-between">
             {
