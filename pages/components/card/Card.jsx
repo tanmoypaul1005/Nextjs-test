@@ -2,7 +2,9 @@ import Image from 'next/image';
 import React from 'react';
 
 const Card = ({ title,description,image }) => {
+
     return (
+        
         <div>
             <div className="flex justify-center">
                 <div className="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg">
