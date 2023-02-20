@@ -16,6 +16,7 @@ function DetailServerSide({ data }) {
 }
 
 export async function getServerSideProps(context) {
+    
     const id = context.query
 
     const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${[id?.news_id]}`);
