@@ -13,7 +13,6 @@ function MyComponent() {
             },
             body: JSON.stringify({ data })
         })
-
         // console.log("res",res)
         if (res.status === 200) {
             console.log('Data received')
@@ -23,7 +22,7 @@ function MyComponent() {
     }
 
     return (
-        <div className='m-[20px] '>
+        <div className='m-[20px]'>
             <form onSubmit={handleSubmit}>
                 <input
                     className='ring-1 ring-orange-600'
