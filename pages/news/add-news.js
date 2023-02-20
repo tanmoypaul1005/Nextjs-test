@@ -1,6 +1,7 @@
 import { useState } from 'react'
 
 function MyComponent() {
+    
     const [data, setData] = useState('')
 
     const handleSubmit = async (event) => {
